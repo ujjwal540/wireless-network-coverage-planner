@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 <img src="assets/logo.png" width="140" alt="Wireless Network Coverage Planner logo" />
@@ -309,3 +310,7 @@ At every grid point, the simulator evaluates **every transmitter** and keeps the
 ## 📜 License
 
 Released under the [MIT License](LICENSE).
+=======
+# wireless-network-coverage-planner
+A Python-based Wireless Network Coverage Planner that simulates RF signal propagation, path loss, coverage radius, obstacle attenuation, and heatmap visualization for WiFi and cellular base stations.
+>>>>>>> 609629571385b020a7845492b8266a18099d2132
