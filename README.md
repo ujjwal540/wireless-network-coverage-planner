@@ -296,13 +296,34 @@ At every grid point, the simulator evaluates **every transmitter** and keeps the
 
 ---
 
-## 🛣️ Possible Extensions
+## 📊 Results
+
+Default configuration (`120m × 90m` site, 3 APs, 7 obstacles, log-distance model, `n=3.0`, `-75 dBm` threshold):
+
+| Transmitter | EIRP | Frequency | Theoretical LOS Radius |
+|---|---|---|---|
+| AP-1 | 22.0 dBm | 2400 MHz | ≈ 79.2 m |
+| AP-2 | 21.0 dBm | 5000 MHz | ≈ 44.9 m |
+| AP-3 | 18.0 dBm | 2400 MHz | ≈ 58.2 m |
+
+**Overall coverage: 69.2%** of the site area at or above the -75 dBm sensitivity threshold, once wall/door/partition attenuation is factored in.
+
+Switching to the free-space model (`--model fspl --threshold -70`) removes all obstacle loss and expands theoretical radii to 170–400 m, pushing coverage to ~99% — a useful sanity check that the obstacle model is meaningfully affecting results.
+
+## 🛣️  Future Work
 
 - Multi-floor / 3-D propagation with floor-to-floor attenuation
 - Interference & channel-overlap analysis for co-located APs
 - Import real floor plans (image) and click-to-place obstacles/transmitters
 - Interactive version using `ipywidgets` or a small Flask/Streamlit front end
 - Shadowing (log-normal fading) for more realistic Monte-Carlo coverage estimates
+
+---
+
+## 👤 Author
+
+**Ujjwal Kumar Karn**
+GitHub: [@ujjwal540](https://github.com/ujjwal540)
 
 ---
 
